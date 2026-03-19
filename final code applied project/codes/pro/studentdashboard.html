@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - TutorLink</title>
+    <link rel="stylesheet" href="page.css">
+</head>
+
+<body>
+
+    <div id="loadingScreen">
+        <div class="loader"></div>
+    </div>
+
+    <div id="pageContent" style="display:none;">
+        <header>
+            <div class="brand">TutorLink</div>
+            <nav>
+                <ul>
+                    <li><a href="tutorloginpage.html">As a Tutor</a></li>
+                    <li><a href="#" id="logout-btn">Logout</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="dashboard-container">
+
+            <aside class="sidebar">
+                <!-- Profile Summary Section (inside sidebar) -->
+                <div class="profile-summary">
+                    <!-- Profile picture input -->
+                    <label for="profile-pic-input">
+                        <img id="dashboard-profile-pic" class="profile-photo" />
+                    </label>
+
+                    <p>Welcome, <span id="student-name">Student Name</span>!</p>
+                </div>
+                <nav class="dash-nav">
+                    <a href="#" class="nav-item active">
+                        Dashboard
+                    </a>
+                    <a href="#request-form-section" class="nav-item">
+                        Request Tutor
+                    </a>
+                    <a href="#my-requests-section" class="nav-item">
+                        My Requests
+                    </a>
+                    <a href="#available-tutors-section" class="nav-item">
+                        Available Tutors
+                    </a>
+                    <a href="studentprofile.html" class="nav-item">
+                        My Profile
+                    </a>
+                </nav>
+            </aside>
+
+            <main class="main-content">
+
+                <!-- Available Tutors Section -->
+                <div class="card available-tutors" id="available-tutors-section">
+                    <h3>Available Tutors</h3>
+                    <div id="tutor-card" class="tutor-card">
+                        <div class="tutor-list">
+                            <div class="tutor-item">
+                                <img alt="Tutor" class="tutor-photo">
+                                <div class="tutor-info">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="grid-container">
+
+                    <div class="card notice-board" id="notice-board-section">
+                        <h3>Tutor's Common Notices</h3>
+                        <div class="notice-list"></div>
+                    </div>
+
+                    <div class="card upcoming-class">
+                        <h3>Upcoming Meetings</h3>
+                    </div>
+
+                    <div class="card my-requests-status" id="my-requests-section">
+                        <h3>My Pending Requests</h3>
+                    </div>
+
+                </div>
+
+                <div class="card request-form-card" id="request-form-section">
+                    <h3>Request a New Session</h3>
+                    <form id="request-tutor-form">
+                        <div class="form-group-flex">
+                            <div class="form-group">
+                                <label for="req-subject">Subject</label>
+                                <input type="text" id="req-subject" required placeholder="e.g., Data Structures">
+                            </div>
+                            <div class="form-group">
+                                <label for="req-lang">Language</label>
+                                <select id="req-lang" required>
+                                    <option value="English">English</option>
+                                    <option value="Tamil">Tamil</option>
+                                    <option value="Sinhala">Sinhala</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="req-type">Meeting Type</label>
+                                <select id="req-type" required>
+                                    <option value="Physical">Physical Meeting</option>
+                                    <option value="Zoom">Zoom/Online</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="req-tutor">Tutor Email</label>
+                                <input type="email" id="req-tutor" required placeholder="@gmail.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="req-desc">Topic / Problem Description</label>
+                                <textarea id="req-desc" required
+                                    placeholder="Need help with quicksort algorithm implementation and complexity analysis..."></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn request-btn">Submit Request</button>
+                    </form>
+                </div>
+
+
+                <div class="card feedback-form-card" id="feedback-form-section">
+                    <h3>Session Feedback</h3>
+                    <form id="session-feedback-form">
+                        <div class="form-group-flex">
+                            <div class="form-group">
+                                <label for="feedback-session-tutor">Tutor</label>
+                                <input type="email" id="feedback-session-tutor" required placeholder="Tutor Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="feedback-session-subject">Subject</label>
+                                <input type="text" id="feedback-session-subject" required
+                                    placeholder="e.g., Mathematics">
+                            </div>
+                            <div class="form-group">
+                                <label for="feedback-session-date">Date of Session</label>
+                                <input type="date" id="feedback-session-date" required>
+                            </div>
+                            <div class="form-group" style="flex-basis: 100%;">
+                                <label for="feedback-comments">Comments / Feedback</label>
+                                <textarea id="feedback-comments" required
+                                    placeholder="Write your feedback about the session..."></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn submit-feedback-btn">Submit Feedback</button>
+                    </form>
+                </div>
+
+            </main>
+        </div>
+
+
+        <script type="module" src="firebase.js"></script>
+        <script type="module" src="studentdashboard.js"></script>
+        <script type="module" src="profile.js"></script>
+    </div>
+
+
+
+
+</body>
+
+</html>

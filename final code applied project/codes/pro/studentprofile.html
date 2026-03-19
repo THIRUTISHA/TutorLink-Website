@@ -1,0 +1,88 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - TutorLink</title>
+    <link rel="stylesheet" href="page.css"> 
+</head>
+<body>
+
+
+    <div id="loadingScreen">
+        <div class="loader"></div>
+    </div>
+    
+    <div id="pageContent" style="display:none;">
+
+        <header>
+            <div class="brand">TutorLink</div>
+            <nav>
+                <ul>
+                    <li><a href="studentdashboard.html">Dashboard</a></li>
+                
+            </nav>
+        </header>
+
+        
+        <!-- Profile Container -->
+        <div class="profile-container">
+            <div class="profile-card">
+
+                <!-- LEFT SIDE -->
+                <div class="stu-profile-left">
+                    <h3>Student Profile</h3>
+
+                    <div class="stu-profile-photo">
+                        <img src="https://img.freepik.com/premium-vector/default-avatar-profile-icon-social-media-user-image-gray-avatar-icon-blank-profile-silhouette-vector-illustration_561158-3407.jpg"
+                            id="profile-pic" alt="Profile Picture">
+
+                        <input type="file" id="profile-pic-input" accept="image/*"
+                            onchange="previewProfilePic(event)" style="display:none;">
+
+                        <div class="add-icon"
+                            onclick="document.getElementById('profile-pic-input').click();">+</div>
+                    </div>
+                </div>
+
+                <!-- RIGHT SIDE (FORM) -->
+                <div class="profile-right">
+                    <form id="profile-form">
+
+                        <div class="form-group">
+                            <label for="student-name">Name</label>
+                            <input type="text" id="student-name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="student-email">Email</label>
+                            <input type="email" id="student-email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="course">Course</label>
+                            <input type="text" id="course" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="student-year">Year</label>
+                            <input type="number" id="student-year" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="student-languages">Languages</label>
+                            <input type="text" id="student-languages" required>
+                        </div>
+
+                        <button type="submit" class="save-btn">Save Changes</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+
+    <script type="module" src="profile.js"></script>
+</div>
+
+</body>
+</html>

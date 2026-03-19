@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutor Dashboard - TutorLink</title>
+    <link rel="stylesheet" href="page.css"> 
+</head>
+<body>
+
+    <div id="loadingScreen">
+        <div class="loader"></div>
+    </div>
+    
+    <div id="pageContent" style="display:none;">
+
+        <header>
+            <div class="brand">TutorLink</div>
+            <nav>
+                <ul>
+                    <li><a href="studentloginpage.html">As a student</a></li>
+                    <li><a href="#" id="logout-btn">Logout</a></li> 
+                </ul>
+            </nav>
+        </header>
+
+        <div class="dashboard-container">
+            
+            <aside class="sidebar">
+                <div class="profile-summary">
+                    <label for="profile-pic-input">
+                        <img id="dashboard-profile-pic" src="https://img.freepik.com/premium-vector/default-avatar-profile-icon-social-media-user-image-gray-avatar-icon-blank-profile-silhouette-vector-illustration_561158-3407.jpg" class="profile-photo" />
+                    </label>
+
+                    <p>Welcome, <span id="tutor-name">Tutor Name</span>!</p>
+                </div>
+                <nav class="dash-nav">
+                    <a href="#student-requests-section" class="nav-item active">
+                        Student Requests
+                    </a>
+                    <a href="#feedback-section" class="nav-item">
+                        Student Feedback
+                    </a>
+                    <a href="#upcoming-sessions-section" class="nav-item">
+                        Upcoming Sessions
+                    </a>
+                    <a href="tutorprofile.html" class="nav-item">
+                        My Profile
+                    </a>
+                    <a href="#notifications-section" class="nav-item">
+                        Notice
+                    </a>
+                </nav>
+            </aside>
+
+            <main class="main-content">
+            
+                <!-- Student Requests Section -->
+                <div class="card scrollable-card" id="student-requests-section">
+                    <h3>Student Requests</h3>
+                </div>
+
+                <!-- Student Feedback Section -->
+                <div class="card" id="feedback-section">
+                    <h3>Student Feedback</h3>
+                    <div class="feedback-item"></div>
+                </div>
+
+                <!-- Upcoming Sessions Section -->
+                <div class="card" id="upcoming-sessions-section">
+                    <h3>Upcoming Sessions</h3>
+                </div>
+
+                <!-- Notepad Section -->
+                <div class="card" id="notepad-section">
+                    <h3>Notice</h3>
+                    <textarea id="notepad" placeholder="Write your message here..." rows="12"></textarea>
+                    <button class="btn save-notes-btn" onclick="saveNotes()">Send</button>
+                    <p id="save-status" style="color: green; display: none;">Updated!</p>
+                </div>
+
+
+            </main>
+        </div>
+
+    <div id="session-popup">
+            <div>
+                <h3>Schedule Session</h3>
+
+                <label>Date:</label><br>
+                <input type="date" id="session-date"><br><br>
+
+                <label>Time:</label><br>
+                <input type="time" id="session-time"><br><br>
+
+                <button class="btn" onclick="saveSession()">Save</button>
+                <button class="btn" onclick="closePopup()">Cancel</button>
+
+                <input type="hidden" id="selected-request-id">
+            </div>
+        </div>
+
+
+
+    <script type="module" src="firebase.js"></script>
+    <script type="module" src="tutordasboard.js"></script>
+</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - TutorLink</title>
+  <link rel="stylesheet" href="page.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="brand">TutorLink</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>  
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Login Section -->
+  <section class="login-section">
+    <div class="content">
+      <fieldset>
+        <h1> Student Login</h1>
+        <br>
+        <p>Enter your credentials to access your dashboard</p>
+        <br><br>
+
+        <!-- Login Form -->
+        <form id="login-form" autocomplete="on">
+          <div class="form-group">
+            <label for="email">University Email</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your university email" />
+          </div>
+            <br>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required placeholder="Enter your password" />
+          </div>
+
+          <button type="submit" class="btn">Login</button>
+
+          <!-- Forgot Password Link -->
+          <div class="forgot-password">
+           <a href="forgetpasswordpage.html">Forgot password?</a>
+
+          </div>
+        </form>
+        <p class="signup-link">Don't have an account? <a href="studentsignup.html">Signup here</a></p>
+    </div>
+    </fieldset>
+  </section>
+<script type="module" src="firebase.js"></script>
+</body>
+</html>

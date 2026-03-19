@@ -1,0 +1,1899 @@
+#loadingScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Maroon spinner */
+.loader {
+    width: 60px;
+    height: 60px;
+    border: 6px solid #ccc;
+    border-top-color: maroon;
+    border-radius: 50%;
+    animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/*___________________________IndexPage______________________________ */
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('https://cissolar.com/wp-content/uploads/2024/07/tutoring-and-academic-support.jpg') no-repeat center top / 100% auto;
+    font-family: Arial, sans-serif;
+    color: #161212;
+    background-color: #f4f4f9;
+}
+
+/* Header */
+header {
+    background-color: maroon;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: orange;
+}
+
+/* Main Section */
+.main-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.main-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.main-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Buttons (combined student & tutor buttons) */
+.role-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.role-buttons .btn {
+    padding: 15px 30px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: maroon;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.role-buttons .btn:hover {
+    background-color: #e67300;
+}
+
+/* About Section */
+.about {
+    padding: 40px 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.about p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Contact & Footer */
+.contact-footer {
+    background-color: maroon;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.contact-footer a {
+    color: orange;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.contact-footer a:hover {
+    color: white;
+}
+
+.contact-footer footer {
+    padding-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .role-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .main-section h1 {
+        font-size: 2rem;
+    }
+
+    .main-section p,
+    .about p {
+        font-size: 1rem;
+    }
+
+    .about h2 {
+        font-size: 1.8rem;
+    }
+}
+
+
+
+/*______________________________________________ Login Page ______________________________________________*/
+
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(250, 250, 250, 0.2));
+}
+
+/* Fieldset */
+.login-section fieldset {
+    width: 620px;
+    max-width: 95%;
+    height: 500px;
+    padding: 24px;
+    background: #eee5e5;
+    border: 1px solid #d3d3d3;
+    border-radius: 8px;
+    text-align: left;
+    opacity: 0.9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Heading */
+.login-section h1 {
+    font-size: 32px;
+    color: maroon;
+    margin-bottom: 6px;
+    text-align: center;
+}
+
+/* Form Group */
+.login-section .form-group {
+    margin-bottom: 16px;
+}
+
+.login-section .form-group label {
+    font-size: 14px;
+    margin-bottom: 6px;
+    display: block;
+    color: #060606;
+}
+
+.login-section .form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #808a95;
+    border-radius: 4px;
+}
+
+/* Button */
+.login-section .btn {
+    background: maroon;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 auto;
+    display: block;
+    transition: 0.3s;
+}
+
+.login-section .btn:hover {
+    background: orange;
+}
+
+/* Links */
+.login-section .signup-link,
+.forgot-password {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-section .signup-link a,
+.forgot-password a {
+    color: maroon;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.login-section .signup-link a:hover,
+.forgot-password a:hover {
+    color: orange;
+}
+
+/* Remember Me */
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+.remember-me label {
+    font-size: 14px;
+    color: #161212;
+    cursor: pointer;
+}
+
+/* Checkbox custom */
+.remember-me input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    border: 1.6px solid #808a95;
+    border-radius: 4px;
+    appearance: none;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+}
+
+.remember-me input[type="checkbox"]:checked {
+    background: maroon;
+    border-color: maroon;
+}
+
+.remember-me input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .login-section fieldset {
+        padding: 18px;
+        width: 92%;
+    }
+
+    .remember-me input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+
+
+
+
+/*______________________________________ Signup Page _____________________________________*/
+
+.signup-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 20px;
+    /* ⬅️ 60px top & bottom, 20px left & right */
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(250, 250, 250, 0.2));
+}
+
+
+
+.signup-section fieldset {
+    width: 780px;
+    max-width: 95%;
+    padding: 30px;
+    background: #eee5e5;
+    border: 1px solid #d3d3d3;
+    border-radius: 10px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.signup-section h1 {
+    color: maroon;
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 28px;
+}
+
+.signup-section p {
+    text-align: center;
+    font-size: 15px;
+    color: #333;
+}
+
+/* 2-Column Form Layout */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px 40px;
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+/* Labels */
+.signup-section .form-group label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 6px;
+    color: #222;
+}
+
+/* Inputs & Selects */
+.signup-section .form-group input,
+.signup-section .form-group select {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #808a95;
+    border-radius: 6px;
+    background: white;
+    color: #222;
+    outline: none;
+    transition: 0.2s ease-in-out;
+}
+
+/* Focus effect */
+.signup-section .form-group input:focus,
+.signup-section .form-group select:focus {
+    border-color: maroon;
+    box-shadow: 0 0 4px rgba(128, 0, 0, 0.4);
+}
+
+/* Small Notes */
+.signup-section small {
+    font-size: 12px;
+    margin-top: 4px;
+    color: #555;
+    display: block;
+}
+
+/* Button */
+.signup-section .btn {
+    background-color: maroon;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    margin: 22px auto 0;
+    width: 50%;
+    transition: 0.3s;
+}
+
+.signup-section .btn:hover {
+    background-color: orange;
+    color: #111;
+}
+
+/* Signup Link */
+.signup-section .signup-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.signup-section .signup-link a {
+    color: maroon;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.signup-section .signup-link a:hover {
+    color: orange;
+}
+
+/* Responsive — Switch to 1 Column */
+@media (max-width: 680px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .signup-section .btn {
+        width: 80%;
+    }
+}
+
+
+
+
+/*______________________________studentdashboard___________________________________________*/
+
+/* Dashboard Container */
+.dashboard-container {
+    display: flex;
+    min-height: calc(100vh - 82px);
+    background-image: url('https://i.pinimg.com/736x/53/6c/d4/536cd40dbdf1d88a8cb12081f07b4cae.jpg');
+    background-size: cover;
+    /* cover entire container */
+    background-position: center;
+    /* center the image */
+    background-repeat: no-repeat;
+    /* no repeating */
+    width: 100%;
+    /* ensure it fills horizontally */
+    background-attachment: fixed;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    /* header starts after sidebar */
+    width: 100%;
+    z-index: 100;
+}
+
+
+/* ---------- FIXED SIDEBAR ---------- */
+.sidebar {
+    position: fixed;
+    top: 70px;
+    /* same as header height */
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    color: white;
+    /* full device height */
+    background: #8d5010;
+    border-right: 1px solid #ddd;
+    padding-top: 20px;
+    overflow-y: auto;
+}
+
+.profile-summary {
+    text-align: center;
+    padding: 0 10px 20px 10px;
+    border-bottom: 1px solid #000000;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.profile-photo {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid maroon;
+}
+
+
+/* ---------- ACTIVE TAB STYLE ---------- */
+.dash-nav .nav-item {
+    display: block;
+    padding: 12px 18px;
+    margin: 5px 0;
+    text-decoration: none;
+    color: white;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.dash-nav .nav-item:hover {
+    background: #e6e6e6;
+}
+
+.dash-nav .nav-item.active {
+    background: maroon;
+    color: white;
+    font-weight: bold;
+}
+
+/* Move main content to the right of sidebar */
+.main-content {
+    margin-left: 260px;
+    /* space for sidebar */
+    margin-top: 80px;
+    /* space for header */
+    padding: 20px 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* TWO columns */
+    gap: 25px;
+    width: 100%;
+}
+
+
+
+/* Specific Grid Placements */
+.grid-container {
+    grid-column: 1 / 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.request-form-card {
+    grid-column: 1 / 3;
+}
+
+/* Card Styling (General) */
+.card {
+    background: #eee5e5;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 100%;
+}
+
+.card h3 {
+    color: maroon;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+
+
+
+/* Request Form Card */
+.form-group-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.form-group {
+    flex-basis: 48%;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    height: 100px;
+}
+
+.request-btn {
+    align-self: flex-start;
+    padding: 12px 25px;
+    font-weight: bold;
+    background-color: maroon;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s, transform 0.2s;
+}
+
+/* -------------------- Session Feedback Form -------------------- */
+#session-feedback-form, .tutor-card, #request-tutor-form {
+    background: #f9f4f4;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-sizing: border-box;
+    /* include padding in size */
+}
+
+#session-feedback-form h3 {
+    color: maroon;
+    margin-bottom: 20px;
+    font-size: 22px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+#session-feedback-form .form-group-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#session-feedback-form .form-group {
+    flex-basis: 48%;
+    display: flex;
+    flex-direction: column;
+}
+
+#session-feedback-form .form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+#session-feedback-form .form-group input,
+#session-feedback-form .form-group textarea {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border 0.2s;
+}
+
+#session-feedback-form .form-group input:focus,
+#session-feedback-form .form-group textarea:focus {
+    outline: none;
+    border-color: maroon;
+}
+
+#session-feedback-form .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+#session-feedback-form button.submit-feedback-btn {
+    align-self: flex-start;
+    padding: 12px 25px;
+    font-weight: bold;
+    background-color: maroon;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#session-feedback-form button.submit-feedback-btn:hover {
+    background-color: orange;
+    transform: translateY(-2px);
+}
+
+.feedback-form-card {
+    grid-column: 1 / 3;
+    /* span same as request card */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background: #eee5e5;
+    /* same background as request card */
+    box-sizing: border-box;
+}
+
+
+
+/* Buttons */
+.btn {
+    padding: 10px 20px;
+    background-color: maroon;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 10px 0;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: orange;
+}
+
+/* tutor */
+.available-tutors {
+    grid-column: 1 / 3;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.available-tutors h3 {
+    border-bottom: 2px solid rgb(226, 213, 213);
+    text-align: center;
+    color: maroon;
+    margin-bottom: 25px;
+    font-size: 22px;
+}
+
+/* Language Group Header */
+.tutor-language-group {
+    margin-bottom: 20px;
+}
+
+.tutor-language-group h4 {
+    color: #6b3e00;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+
+.tutor-list {
+    max-height: 500px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.tutor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.tutor-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background-color:white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.tutor-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+
+.tutor-photo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 2px solid #8d5010;
+}
+
+.tutor-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tutor-name {
+    font-weight: bold;
+    color: black;
+    font-size: 16px;
+}
+
+.tutor-subject {
+    color: black;
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+/* Scrollbar Styling */
+.tutor-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.tutor-list::-webkit-scrollbar-thumb {
+    background: maroon;
+    border-radius: 10px;
+}
+
+.tutor-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+
+
+
+
+/* -------------------- My Requests Section Compact Blue Design -------------------- */
+#my-requests-section {
+    max-height: 350px;
+    /* Reduced height */
+    overflow-y: auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center the cards */
+    gap: 12px;
+    background: #f9f4f4;
+}
+
+#my-requests-section h3 {
+    width: 100%; /* make the h3 full width */
+    margin-bottom: 15px;
+    color: maroon;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 2px solid maroon;
+    padding-bottom: 8px;
+    box-sizing: border-box; /* ensures padding is included in width */
+}
+
+
+/* Individual Request Cards */
+#my-requests-section .request-item {
+    background: white;
+    /* Light blue background */
+    padding: 15px 20px;
+    /* Reduced padding */
+    width: 90%;
+    /* Centered */
+    border-radius: 12px;
+    border-left: 5px solid maroon;
+    /* Blue accent */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+#my-requests-section .request-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Request Details */
+#my-requests-section .request-item p {
+    margin: 2px 0;
+    font-size: 17px;
+    color: #222;
+    line-height: 1.3;
+}
+
+#my-requests-section .request-item p strong {
+    color: maroon;
+    /* Blue for labels */
+}
+
+/* Status Badge */
+#my-requests-section .request-status {
+    display: inline-block;
+    padding: 4px 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 20px;
+    margin-top: 6px;
+    text-align: center;
+    width: fit-content;
+}
+
+/* Status Colors */
+#my-requests-section .request-status.pending {
+    background: white;
+    color: #0a4da2;
+    border: 1px solid #8ab8ff;
+}
+
+#my-requests-section .request-status.accepted {
+    background: #c2f0ff;
+    color: #007bb5;
+    border: 1px solid #66e0ff;
+}
+
+#my-requests-section .request-status.rejected {
+    background: #ffd6d6;
+    color: #b30000;
+    border: 1px solid #ff9a9a;
+}
+
+/* Submission Date */
+#my-requests-section .submission-date {
+    font-size: 0.8rem;
+    color: #555;
+    margin-top: 4px;
+    font-style: italic;
+}
+
+/* Scrollbar style */
+#my-requests-section::-webkit-scrollbar {
+    width: 6px;
+}
+
+#my-requests-section::-webkit-scrollbar-thumb {
+    background: maroon;
+    border-radius: 10px;
+}
+
+#my-requests-section::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #my-requests-section {
+        max-height: none;
+        padding: 10px;
+    }
+
+    #my-requests-section .request-item {
+        width: 100%;
+        padding: 12px 16px;
+    }
+
+    #my-requests-section .request-item p {
+        font-size: 13px;
+    }
+}
+
+/* -------------------- Upcoming Meetings Section -------------------- */
+.upcoming-class {
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 12px;    
+    padding: 15px;
+    max-height: 350px;
+    overflow-y: auto;
+    background: #f9f4f4;
+}
+
+.upcoming-class h3 {
+    width: 100%; /* make the h3 full width */
+    margin-bottom: 15px;
+    color: maroon;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 2px solid maroon;
+    padding-bottom: 8px;
+    box-sizing: border-box; /* ensures padding is included in width */
+}
+
+/* Individual Meeting Card */
+.meeting-item {
+    background: #ffffff;
+    padding: 15px 20px;
+    border-radius: 12px;
+    border-left: 5px solid maroon;
+    /* blue accent */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    font-size: 17px;
+    width: 90%;
+    gap: 6px;
+    margin-left: 20px;
+     
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.meeting-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* spacing between cards */
+}
+
+
+
+
+.meeting-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Tutor & Subject */
+.meeting-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.meeting-details .tutor-name {
+    font-weight: 700;
+    color: maroon;
+    /* accent color */
+    font-size: 1rem;
+}
+
+.meeting-details .meeting-subject {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* Meeting Date & Time */
+.meeting-time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: #777;
+}
+
+.meeting-time .time {
+    font-weight: 600;
+    color: maroon;
+}
+
+.meeting-time .date {
+    font-weight: 500;
+}
+
+/* Optional: horizontal line separator */
+.meeting-item hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 10px 0 0 0;
+}
+
+/* Scrollbar for meetings container */
+.upcoming-class::-webkit-scrollbar {
+    width: 6px;
+}
+
+.upcoming-class::-webkit-scrollbar-thumb {
+    background: maroon;
+    border-radius: 10px;
+}
+
+.upcoming-class::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .upcoming-class {
+        grid-template-columns: 1fr;
+        /* single column on mobile */
+        max-height: none;
+    }
+
+    .meeting-item {
+        padding: 15px 20px;
+    }
+}
+
+/* Flex container for session type, date, time */
+.meeting-extra {
+    display: flex;
+    gap: 15px;
+    margin: 8px 0;
+    flex-wrap: wrap;
+}
+
+/* Individual tags styling */
+.meeting-extra span {
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* Different colors for each */
+.meeting-extra .session-type {
+    background: maroon;
+}
+
+.meeting-extra .date {
+    background: #0077b6; /* blue */
+}
+
+.meeting-extra .time {
+    background: #ff7f50; /* coral */
+}
+
+
+/* -------------------- Notice Board Section -------------------- */
+.notice-board {
+    max-height: 350px;
+    overflow-y: auto;
+    padding: 15px;
+    background: #f9f4f4;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.notice-board h3 {
+    color: maroon;
+    font-size: 22px; /* increased from 20px */
+    font-weight: 700;
+    border-bottom: 2px solid maroon;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+/* Individual Notice Item */
+.notice-item {
+    background: #ffffff;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border-left: 5px solid maroon;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 12px;
+}
+
+.notice-item:last-child {
+    margin-bottom: 0;
+}
+
+.notice-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.notice-item p {
+    margin: 2px 0;
+    font-size: 17px; /* increased from 14px */
+    color: #333;
+}
+
+.notice-item p strong {
+    color: maroon;
+}
+
+.notice-board::-webkit-scrollbar {
+    width: 6px;
+}
+
+.notice-board::-webkit-scrollbar-thumb {
+    background: maroon;
+    border-radius: 10px;
+}
+
+.notice-board::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* _____________________________________TUTOR DASHBOARD STYLES _____________________________________ */
+
+.request-item,
+.session-item,
+.feedback-item,
+.notification-item {
+    background: #f9f4f4;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+
+
+/* ---------- FIXED SIDEBAR ---------- */
+.sidebar {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    color: white;
+    background: #8d5010;
+    border-right: 1px solid #ddd;
+    padding-top: 20px;
+    overflow-y: auto;
+}
+
+.sidebar a {
+    display: block;
+    padding: 12px 18px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+
+.sidebar a:hover {
+    border-radius: 8px;
+}
+
+
+/* Profile section inside sidebar */
+.profile-summary {
+    text-align: center;
+    padding: 0 10px 20px 10px;
+    border-bottom: 1px solid #000;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.profile-photo {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid maroon;
+}
+
+/* Sidebar navigation links */
+.dash-nav .nav-item {
+    display: block;
+    padding: 12px 18px;
+    margin: 5px 0;
+    text-decoration: none;
+    color: white;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.dash-nav .nav-item:hover {
+    background: #e6e6e6;
+}
+
+.dash-nav .nav-item.active {
+    background: maroon;
+    color: white;
+    font-weight: bold;
+}
+
+/* Push main content aside */
+.main-content {
+    margin-left: 260px;
+    margin-top: 80px;
+    padding: 20px 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.request-item b, .session-item b {
+    color: maroon;
+}
+
+
+#session-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+#session-popup>div {
+    background: #fff;
+    padding: 25px 30px;
+    width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+#session-popup .btn {
+    margin: 5px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#session-popup input[type="date"],
+#session-popup input[type="time"] {
+    width: 80%;
+    padding: 6px 8px;
+    margin-top: 4px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+#student-requests-section {
+    max-height: 450px;
+    /* adjust based on your layout */
+    overflow-y: auto;
+    /* vertical scroll */
+    padding: 15px;
+    background: #f9f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#student-requests-section h3,
+#upcoming-sessions-section h3,
+#feedback-section h3{
+    border-bottom-color: maroon;
+}
+
+
+/* Scrollbar styling for modern look */
+#student-requests-section::-webkit-scrollbar {
+    width: 8px;
+}
+
+#student-requests-section::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 4px;
+}
+
+#student-requests-section::-webkit-scrollbar-thumb {
+    background: maroon;
+    border-radius: 4px;
+}
+
+.request-item {
+    background: #fff;
+    margin-bottom: 12px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.request-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.request-item p {
+    margin: 1px 0;
+}
+
+.request-item .btn {
+    margin-top: 8px;
+    margin-right: 6px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.request-item .accept-btn {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.request-item .accept-btn:hover {
+    background-color: #45a049;
+}
+
+.request-item .reject-btn {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.request-item .reject-btn:hover {
+    background-color: #e53935;
+}
+
+.request-item {
+    background: #fff;
+    margin-bottom: 12px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+
+    display: flex;
+    /* row layout */
+    justify-content: space-between;
+    gap: 20px;
+    /* space between left & right */
+    align-items: flex-start;
+}
+
+.request-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Left side (all info except description) */
+.request-left {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+}
+
+/* Right side (description) */
+.request-right {
+    background: #fff0f0;
+    padding: 10px;
+    border-radius: 6px;
+    flex: 1;
+    /* takes remaining space */
+    max-width: 250px;
+    /* optional max width */
+    word-wrap: break-word;
+    font-size: 14px;
+}
+
+/* Buttons under left info */
+.request-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.request-item .accept-btn {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.request-item .accept-btn:hover {
+    background-color: #45a049;
+}
+
+.request-item .reject-btn {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.request-item .reject-btn:hover {
+    background-color: #e53935;
+}
+
+
+.session-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    background: #fff;
+    margin-bottom: 12px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.session-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.session-left,
+.session-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.session-right {
+    max-width: 200px;
+    /* optional */
+    background: #f0f4ff;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+
+.feedback-item {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background-color: white;
+}
+
+.feedback-message {
+    background: #fff0f0;
+    /* light blue bubble */
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 500;
+    color: maroon;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.feedback-details {
+    font-size: 13px;
+    color: #555;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+#feedback-section {
+    max-height: 450px;
+    /* adjust height as needed */
+    overflow-y: auto;
+    /* vertical scroll */
+    padding: 15px;
+    background: #f9f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Scrollbar styling for modern look */
+#feedback-section::-webkit-scrollbar {
+    width: 8px;
+}
+
+#feedback-section::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    border-radius: 4px;
+}
+
+#feedback-section::-webkit-scrollbar-thumb {
+    background: #8d5010;
+    border-radius: 4px;
+}
+
+
+#upcoming-sessions-section {
+    max-height: 450px;
+    /* adjust as needed */
+    overflow-y: auto;
+    /* vertical scroll */
+    padding: 15px;
+    background: #f9f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Scrollbar styling */
+#upcoming-sessions-section::-webkit-scrollbar {
+    width: 8px;
+}
+
+#upcoming-sessions-section::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 4px;
+}
+
+#upcoming-sessions-section::-webkit-scrollbar-thumb {
+    background: maroon;
+    border-radius: 4px;
+}
+
+.session-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    background: #fff;
+    margin-bottom: 12px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.session-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.session-left,
+.session-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.session-right {
+    max-width: 200px;
+    /* optional */
+    background: #fff1f0;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+
+/* -------------------- NOTEPAD SECTION -------------------- */
+#notepad-section {
+    background: #f9f4f4;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#notepad-section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+#notepad-section h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #333;
+    font-weight: 600;
+    border-bottom-color: maroon;
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+#notepad {
+    width: 100%;
+    min-height: 120px;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+#notepad:focus {
+    border-color: #8d5010;
+    box-shadow: 0 0 8px rgba(141, 80, 16, 0.3);
+    outline: none;
+}
+
+.save-notes-btn {
+    align-self: flex-start;
+    padding: 8px 18px;
+    background: maroon;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s, transform 0.2s;
+}
+
+.save-notes-btn:hover {
+    background: #b06b1d;
+    transform: translateY(-2px);
+}
+
+#save-status {
+    font-size: 14px;
+    color: green;
+    margin-top: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*___________________________ Modern Profile Page ___________________________*/
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Center whole card */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px ;
+    width: 100%;
+}
+
+/* Center the full card horizontally */
+.profile-card {
+    width: 90%;
+    max-width: 1200px;
+    background: linear-gradient(to bottom right, #ffffff, #f7f4f4);
+    padding: 40px 50px;
+    border-radius: 22px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.18); /* better floating effect */
+    display: flex;
+    gap: 60px;
+    background: #f9f4f4;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px; /* extra space if needed */
+}
+
+
+/* Left side centered */
+.stu-profile-left {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* centers image + title */
+    justify-content: center;
+    text-align: center;
+    
+}
+
+/* Title */
+.stu-profile-left h3 {
+    font-size: 2rem;
+    color: maroon;
+    margin-bottom: 25px;
+}
+
+/* Bigger centered profile pic */
+.stu-profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: #d1caca;
+    position: relative;
+    overflow: visible;   /* IMPORTANT — ensures the + icon is visible */
+    margin-bottom: 20px;
+    border: 4px solid #7c0000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stu-profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* FIXED + ICON */
+.add-icon {
+    position: absolute;
+    bottom: -5px; /* moved outside for visibility */
+    right: -5px;
+    background: maroon;
+    color: #fff;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1000; /* ensures it's always on top */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Right panel stays same */
+.profile-right {
+    width: 65%;
+}
+
+/* Form Fields */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.form-group input:focus {
+    border-color: maroon;
+    box-shadow: 0 0 6px rgba(150, 0, 0, 0.3);
+}
+
+/* Button */
+.save-btn {
+    padding: 15px 25px;
+    font-size: 1.1rem;
+    background: maroon;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.save-btn:hover {
+    background: #a10000;
+}
+
+/* Mobile Responsive */
+@media (max-width: 850px) {
+    .profile-card {
+        flex-direction: column;
+        padding: 30px;
+        align-items: center;
+    }
+
+    .profile-left,
+    .profile-right {
+        width: 100%;
+    }
+
+    .profile-right {
+        margin-top: 20px;
+    }
+}

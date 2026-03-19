@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutor Profile - TutorLink</title>
+    <link rel="stylesheet" href="page.css"> 
+</head>
+<body>
+
+    <div id="loadingScreen">
+        <div class="loader"></div>
+    </div>
+    
+    <div id="pageContent" style="display:none;">
+
+        <!-- Header -->
+        <header>
+            <div class="brand">TutorLink</div>
+            <nav>
+                <ul>
+                    <li><a href="tutordashboard.html">Dashboard</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Profile Container -->
+        <div class="profile-container">
+            <div class="profile-card">
+
+                <!-- LEFT SIDE -->
+                <div class="stu-profile-left">
+                    <h3>Tutor Profile</h3>
+
+                    <!-- Profile Picture -->
+                    <div class="stu-profile-photo">
+                        <img id="tutor-profile-pic"
+                            src="https://img.freepik.com/premium-vector/default-avatar-profile-icon-social-media-user-image-gray-avatar-icon-blank-profile-silhouette-vector-illustration_561158-3407.jpg"
+                            alt="Tutor Profile Picture">
+
+                        <div class="add-icon" onclick="document.getElementById('file-input').click()">+</div>
+
+                        <input type="file" id="file-input" accept="image/*"
+                            onchange="previewTutorProfilePic(event)"
+                            style="display:none">
+                    </div>
+                </div>
+
+                <!-- RIGHT SIDE FORM -->
+                <div class="profile-right">
+                    <form id="profile-form">
+
+                        <div class="form-group">
+                            <label for="tutor-name">Name</label>
+                            <input type="text" id="tutor-name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tutor-email">Email</label>
+                            <input type="email" id="tutor-email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tutor-subjects">Subjects</label>
+                            <input type="text" id="tutor-subjects" placeholder="Mathematics, Physics" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tutor-availability">Availability</label>
+                            <input type="text" id="tutor-availability" placeholder="Mon–Fri, 10 AM – 2 PM" required>
+                        </div>
+
+                        <!-- Multi-select -->
+                        <div class="form-group">
+                            <label for="t-lang">Languages you teach</label>
+                            <select id="t-lang" name="languages" multiple>
+                                <option value="English">English</option>
+                                <option value="Tamil">Tamil</option>
+                                <option value="Sinhala">Sinhala</option>
+                            </select>
+                            <small>Hold Ctrl (or Cmd) to select multiple</small>
+                        </div>
+
+                        <button type="submit" class="save-btn">Save Changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Firebase Tutor JS -->
+        <script type="module" src="tutorprofile.js"></script>
+    </div>
+
+</body>
+</html>

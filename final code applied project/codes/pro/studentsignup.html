@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Student Signup - TutorLink</title>
+  <link rel="stylesheet" href="page.css" />
+</head>
+<body>
+  <header>
+    <div class="brand">TutorLink</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="signup-section">
+  <fieldset>
+    <h1>Student Signup</h1>
+    <p>Create your student account using your university email</p>
+    <br>
+
+    <form id="student-signup-form">
+      <div class="form-grid">
+
+        <div class="col">
+          <div class="form-group">
+            <label for="s-name">Full Name</label>
+            <input id="s-name" type="text" required placeholder="Your full name">
+          </div>
+
+          <div class="form-group">
+            <label for="s-email">University Email</label>
+            <input id="s-email" type="email" required placeholder="you@stu.kln.ac.lk">
+          </div>
+
+          <div class="form-group">
+            <label for="s-lang">Preferred Languages</label>
+            <select id="s-lang" multiple>
+              <option value="English">English</option>
+              <option value="Tamil">Tamil</option>
+              <option value="Sinhala">Sinhala</option>
+            </select>
+            <small>Hold Ctrl (or Cmd) to select multiple</small>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="form-group">
+            <label for="s-index">Student Number</label>
+            <input id="s-index" type="text" required placeholder="Your Student Number">
+          </div>
+
+          <div class="form-group">
+            <label for="s-course">Course / Year</label>
+            <input id="s-course" type="text" placeholder="eg. BICT / 2nd year">
+          </div>
+
+          <div class="form-group">
+            <label for="s-password">Password</label>
+            <input id="s-password" type="password" required placeholder="Choose a secure password">
+          </div>
+        </div>
+
+      </div>
+
+      <button type="submit" class="btn">Signup as Student</button>
+    </form>
+
+    <p class="signup-link">
+      Already have an account? <a href="studentloginpage.html">Login</a>
+    </p>
+  </fieldset>
+</section>
+
+  <script type="module" src="firebase.js"></script>
+</body>
+</html>
